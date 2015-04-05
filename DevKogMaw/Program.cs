@@ -314,7 +314,7 @@ namespace DevKogMaw
 
         private static int GetRStacks()
         {
-            var query = Player.Buffs.Where(x => x.DisplayName == "KogMawLivingArtillery");
+            var query = Player.Buffs.Where(buff => buff.DisplayName == "KogMawLivingArtillery");
             if (query.Any())
                 return query.First().Count;
             else
